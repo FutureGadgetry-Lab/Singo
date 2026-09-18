@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0d1210">
+  <title>Singo · 流量面板</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div><span class="mark">S</span><h1>Singo</h1><p>sing-box traffic, made quiet.</p></div>
+      <div id="health" class="health"><i></i><span>连接中</span></div>
+    </header>
+    <section class="hero">
+      <p class="eyebrow">累计流量</p>
+      <strong id="total">—</strong>
+      <div class="split"><span>↑ 上传 <b id="up">—</b></span><span>↓ 下载 <b id="down">—</b></span></div>
+    </section>
+    <section class="chart-card">
+      <div class="section-title"><div><p class="eyebrow">最近 14 天</p><h2>每日用量</h2></div><span id="updated">—</span></div>
+      <div id="chart" class="chart"></div>
+    </section>
+    <section>
+      <div class="section-title"><div><p class="eyebrow">用户</p><h2>流量排行</h2></div><span id="count">0 位用户</span></div>
+      <div id="users" class="users"><div class="empty">等待第一笔流量…</div></div>
+    </section>
+    <footer>数据只保存在这台服务器上 · 每 10 秒自动刷新</footer>
+  </main>
+  <script src="/app.js" defer></script>
+</body>
+</html>

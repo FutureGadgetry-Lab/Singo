@@ -1,0 +1,21 @@
+[Unit]
+Description=Singo sing-box traffic dashboard
+After=network.target sing-box.service
+Wants=sing-box.service
+
+[Service]
+Type=simple
+User=singo
+Group=singo
+ExecStart=/usr/local/bin/singo -listen 127.0.0.1:8088 -grpc 127.0.0.1:8080 -data /var/lib/singo/data.json
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/singo
+MemoryMax=64M
+
+[Install]
+WantedBy=multi-user.target
